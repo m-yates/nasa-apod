@@ -7,7 +7,7 @@ export default function NavBar() {
   console.log(location);
   return (
     <nav>
-      <h1>NASA APOD APP</h1>
+      <h1>Stories from space</h1>
       {location.pathname !== "/" && <Button path="/" text={"Back"}></Button>}
     </nav>
   );

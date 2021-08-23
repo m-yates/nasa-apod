@@ -1,8 +1,9 @@
 import React, { useEffect, useState } from "react";
-import { paramCase } from "change-case";
 import { BrowserRouter as Router, Route } from "react-router-dom";
+import { paramCase } from "change-case";
 import Home from "./components/pages/Home/Home";
 import ImageDetails from "./components/pages/ImageDetails/ImageDetails";
+import { AnimatePresence } from "framer-motion";
 import "./App.scss";
 
 const apiKey = process.env.REACT_APP_NASA_KEY;
@@ -16,7 +17,6 @@ function App() {
         `https://api.nasa.gov/planetary/apod?api_key=${apiKey}&count=6&thumbs=true`
       );
       const imageData = await res.json();
-      console.log(imageData);
       const imageDataWithIds = imageData.map((image) => {
         return {
           ...image,
@@ -29,15 +29,17 @@ function App() {
 
   return (
     <Router>
-      <Route
-        exact
-        path="/"
-        render={(props) => <Home {...props} images={images} />}
-      />
-      <Route
-        path="/:id"
-        render={(props) => <ImageDetails {...props} images={images} />}
-      />
+      <AnimatePresence>
+        <Route
+          exact
+          path="/"
+          render={(props) => <Home {...props} images={images} />}
+        />
+        <Route
+          path="/:id"
+          render={(props) => <ImageDetails {...props} images={images} />}
+        />
+      </AnimatePresence>
     </Router>
   );
 }

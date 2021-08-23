@@ -1,5 +1,6 @@
 import React from "react";
 import NavBar from "../../organisms/NavBar/NavBar";
+import { motion } from "framer-motion";
 import "./ImageDetails.scss";
 
 export default function ImageDetails({ images, ...props }) {
@@ -8,7 +9,11 @@ export default function ImageDetails({ images, ...props }) {
     return image.id === id;
   });
   return (
-    <>
+    <motion.div
+      initial={{ opacity: 0 }}
+      animate={{ opacity: 1 }}
+      exit={{ opacity: 0 }}
+    >
       <NavBar />
       <section className="image-details">
         <div>
@@ -20,6 +25,6 @@ export default function ImageDetails({ images, ...props }) {
           className="image-details__image"
         ></div>
       </section>
-    </>
+    </motion.div>
   );
 }
