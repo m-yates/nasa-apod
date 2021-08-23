@@ -1,0 +1,16 @@
+@import "./variables.scss";
+
+@mixin spacing($property, $lg: false, $sm: false) {
+  @if $lg {
+    #{$property}: 120px;
+    @media (max-width: $breakpoint-mobile) {
+      #{$property}: 40px;
+    }
+  }
+  @if $sm {
+    #{$property}: 60px;
+    @media (max-width: $breakpoint-mobile) {
+      #{$property}: 20px;
+    }
+  }
+}

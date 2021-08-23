@@ -1,0 +1,20 @@
+@import "../../../styles/variables.scss";
+
+.image-link {
+  position: relative;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  height: 300px;
+  @media (max-width: $breakpoint-mobile) {
+    height: 275px;
+  }
+}
+
+.image-link__title {
+  padding: 10px;
+  background-color: transparentize($color: $color-black, $amount: 0.4);
+}

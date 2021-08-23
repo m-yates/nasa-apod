@@ -1,0 +1,29 @@
+@import "../../../styles/mixins.scss";
+
+.image-details {
+  @include spacing(padding-left, $sm: true);
+  @include spacing(padding-right, $sm: true);
+  @include spacing(padding-bottom, $lg: true);
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 100px;
+  @media (max-width: $breakpoint-mobile) {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+}
+
+.image-details__title {
+  margin-bottom: 15px;
+}
+
+.image-details__image {
+  min-height: 500px;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  @media (max-width: $breakpoint-mobile) {
+    grid-template-columns: 1fr;
+    min-height: 350px;
+  }
+}
