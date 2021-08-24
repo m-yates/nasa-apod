@@ -10,14 +10,14 @@ export default function ImageLinkGrid({ images }) {
             key={image.url}
             url={image.url}
             title={image.title}
-            path={`/${image.id}`}
+            path={`story/${image.id}`}
           />
         ) : (
           <ImageLink
             key={image.url}
             url={image.thumbnail_url}
             title={image.title}
-            path={`/${image.id}`}
+            path={`story/${image.id}`}
           />
         )
       )}

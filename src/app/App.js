@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-import { BrowserRouter as Router, Route } from "react-router-dom";
+import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 import { paramCase } from "change-case";
 import Home from "./components/pages/Home/Home";
 import ImageDetails from "./components/pages/ImageDetails/ImageDetails";
@@ -29,17 +29,23 @@ function App() {
 
   return (
     <Router>
-      <AnimatePresence>
-        <Route
-          exact
-          path="/"
-          render={(props) => <Home {...props} images={images} />}
-        />
-        <Route
-          path="/:id"
-          render={(props) => <ImageDetails {...props} images={images} />}
-        />
-      </AnimatePresence>
+      <Route
+        render={({ location }) => (
+          <AnimatePresence>
+            <Switch location={location} key={location.pathname}>
+              <Route
+                exact
+                path="/"
+                render={(props) => <Home {...props} images={images} />}
+              />
+              <Route
+                path="/story/:id"
+                render={(props) => <ImageDetails {...props} images={images} />}
+              />
+            </Switch>
+          </AnimatePresence>
+        )}
+      />
     </Router>
   );
 }
