@@ -2,7 +2,7 @@ import React, { useEffect, useState } from "react";
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 import { paramCase } from "change-case";
 import Home from "./components/pages/Home/Home";
-import NavBar from "./components/organisms/NavBar/NavBar";
+import Header from "./components/organisms/Header/Header";
 import ImageDetails from "./components/pages/ImageDetails/ImageDetails";
 import { AnimatePresence } from "framer-motion";
 import "./App.scss";
@@ -15,7 +15,7 @@ function App() {
     getImages();
     async function getImages() {
       const res = await fetch(
-        `https://api.nasa.gov/planetary/apod?api_key=${apiKey}&count=6&thumbs=true`
+        `https://api.nasa.gov/planetary/apod?api_key=${apiKey}&count=12&thumbs=true`
       );
       const imageData = await res.json();
       const imageDataWithIds = imageData.map((image) => {
@@ -31,7 +31,6 @@ function App() {
   return (
     <>
       <Router>
-        <NavBar />
         <Route
           render={({ location }) => (
             <AnimatePresence exitBeforeEnter>

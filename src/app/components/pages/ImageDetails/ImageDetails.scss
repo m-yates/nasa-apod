@@ -4,6 +4,9 @@
   @include spacing(padding-left, $sm: true);
   @include spacing(padding-right, $sm: true);
   @include spacing(padding-bottom, $lg: true);
+}
+
+.image-details__content {
   display: grid;
   grid-template-columns: 1fr 1fr;
   gap: 100px;
@@ -13,7 +16,7 @@
   }
 }
 
-.image-details__title {
+.image-details__content__title {
   margin-bottom: 15px;
 }
 

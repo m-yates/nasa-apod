@@ -1,0 +1,23 @@
+@import "../../../styles/mixins.scss";
+
+header {
+  @include spacing(padding-left, $sm: true);
+  @include spacing(padding-right, $sm: true);
+  @include spacing(padding-top, $lg: true);
+  @include spacing(padding-bottom, $lg: true);
+  text-align: center;
+}
+
+.intro {
+  width: 700px;
+  margin: 0 auto;
+  margin-bottom: 20px;
+}
+
+.header__buttons {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  margin-top: 20px;
+}

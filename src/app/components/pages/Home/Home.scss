@@ -1,6 +1,5 @@
 @import "../../../styles/mixins.scss";
 
 .loading {
-  @include spacing(padding-left, $sm: true);
-  @include spacing(padding-right, $sm: true);
+  text-align: center;
 }

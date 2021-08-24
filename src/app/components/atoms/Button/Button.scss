@@ -1,10 +1,18 @@
 @import "../../../styles/variables.scss";
 
 .button {
+  display: inline-block;
   background-color: $color-white;
-  color: $color-black;
+  color: $color-blue-dark;
   cursor: pointer;
   text-transform: uppercase;
   font-weight: 700;
-  padding: 7px 10px;
+  padding: 12px 18px;
+  border-radius: 20px;
+}
+
+.button--outlined {
+  background-color: transparent;
+  border: 2px #9da5bd solid;
+  color: $color-white;
 }
