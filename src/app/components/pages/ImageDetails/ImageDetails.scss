@@ -17,13 +17,19 @@
   margin-bottom: 15px;
 }
 
-.image-details__image {
+.image-details__photo {
+  position: relative;
+  overflow: hidden;
   min-height: 500px;
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
-  @media (max-width: $breakpoint-mobile) {
-    grid-template-columns: 1fr;
-    min-height: 350px;
-  }
+}
+
+.image-details__photo__inner {
+  position: absolute;
+  inset: 0;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
 }

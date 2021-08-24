@@ -2,6 +2,7 @@ import React, { useEffect, useState } from "react";
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 import { paramCase } from "change-case";
 import Home from "./components/pages/Home/Home";
+import NavBar from "./components/organisms/NavBar/NavBar";
 import ImageDetails from "./components/pages/ImageDetails/ImageDetails";
 import { AnimatePresence } from "framer-motion";
 import "./App.scss";
@@ -28,25 +29,31 @@ function App() {
   }, []);
 
   return (
-    <Router>
-      <Route
-        render={({ location }) => (
-          <AnimatePresence>
-            <Switch location={location} key={location.pathname}>
-              <Route
-                exact
-                path="/"
-                render={(props) => <Home {...props} images={images} />}
-              />
-              <Route
-                path="/story/:id"
-                render={(props) => <ImageDetails {...props} images={images} />}
-              />
-            </Switch>
-          </AnimatePresence>
-        )}
-      />
-    </Router>
+    <>
+      <Router>
+        <NavBar />
+        <Route
+          render={({ location }) => (
+            <AnimatePresence exitBeforeEnter>
+              <Switch location={location} key={location.pathname}>
+                <Route
+                  exact
+                  path="/"
+                  render={(props) => <Home {...props} images={images} />}
+                />
+                <Route
+                  exact
+                  path="/story/:id"
+                  render={(props) => (
+                    <ImageDetails {...props} images={images} />
+                  )}
+                />
+              </Switch>
+            </AnimatePresence>
+          )}
+        />
+      </Router>
+    </>
   );
 }
 
