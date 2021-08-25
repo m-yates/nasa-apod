@@ -1,10 +1,11 @@
-import React, { useEffect } from "react";
+import React from "react";
+import { useEffect } from "react";
 import { useLocation } from "react-router-dom";
 import Header from "../../organisms/Header/Header";
+import NavBar from "../../organisms/NavBar/NavBar";
 import ImageLinkGrid from "../../organisms/ImageLinkGrid/ImageLinkGrid";
 import { motion } from "framer-motion";
 import { fadeUpVariants } from "../../../constants/animations";
-import NavBar from "../../organisms/NavBar/NavBar";
 
 import "./Home.scss";
 
@@ -23,7 +24,7 @@ export default function Home({ images }) {
           animate="animate"
           exit="exit"
           variants={fadeUpVariants}
-          className="loading"
+          className="header__loading"
         >
           Loading stories...
         </motion.h4>

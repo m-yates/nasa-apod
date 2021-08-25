@@ -1,4 +1,3 @@
-import Button from "../../atoms/Button/Button";
 import { motion } from "framer-motion";
 import { fadeUpVariants } from "../../../constants/animations";
 import "./Header.scss";
@@ -12,15 +11,12 @@ export default function Header() {
       variants={fadeUpVariants}
       className="header"
     >
-      <div className="circle"></div>
+      <div className="header__circle"></div>
       <h1>Stories from space</h1>
-      <p className="intro">
-        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
-        tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim
-        veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea
-        commodo consequat
+      <p className="header__intro">
+        A collection of images, pulled from the NASA 'Astronomy Picture of the
+        Day' API. Click on an image to learn more.
       </p>
-      <Button path="/" text={"Refresh"}></Button>
     </motion.header>
   );
 }

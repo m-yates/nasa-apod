@@ -1,4 +1,4 @@
-const duration = 1;
+const duration = 0.8;
 
 export const fadeUpTransition = {
   duration: duration,

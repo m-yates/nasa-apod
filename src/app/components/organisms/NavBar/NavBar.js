@@ -1,11 +1,18 @@
-import Button from "../../atoms/Button/Button";
 import { useLocation } from "react-router-dom";
+import Button from "../../atoms/Button/Button";
+import { motion } from "framer-motion";
+import { fadeUpVariants } from "../../../constants/animations";
 import "./NavBar.scss";
 
 export default function NavBar() {
   let location = useLocation();
   return (
-    <nav>
+    <motion.nav
+      initial="initial"
+      animate="animate"
+      exit="exit"
+      variants={fadeUpVariants}
+    >
       <div className="logo">
         <h3 className="logo__text">SFS</h3>
         <svg
@@ -43,10 +50,17 @@ export default function NavBar() {
       </div>
 
       {location.pathname === "/" ? (
-        <Button classNames="button--outlined" path="/" text={"Github"}></Button>
+        <a
+          className="button button--outlined"
+          href="https://github.com/mattyatesdev/stories-from-space"
+          target="_blank"
+          rel="noreferrer"
+        >
+          Github
+        </a>
       ) : (
         <Button path="/" text={"Back"}></Button>
       )}
-    </nav>
+    </motion.nav>
   );
 }
