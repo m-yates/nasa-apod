@@ -13,28 +13,27 @@ export default function ImageDetails({ images, ...props }) {
     return image.id === id;
   });
   return (
-    <motion.section
-      initial="initial"
-      animate="animate"
-      exit="exit"
-      className="image-details"
-      variants={fadeUpVariants}
-    >
+    <>
       <NavBar />
-      <div className="image-details__content">
-        <div className="image-details__content__text">
-          <h2 className="image-details__content__title">{image.title}</h2>
-          <p>{image.explanation}</p>
+      <motion.section
+        initial="initial"
+        animate="animate"
+        exit="exit"
+        className="image-details"
+        variants={fadeUpVariants}
+      >
+        <h2 className="image-details__title">{image.title}</h2>
+        <div className="image-details__content">
+          <p className="image-details__desc">{image.explanation}</p>
+          <div className="image-details__photo">
+            <motion.div
+              variants={scaleDownVariants}
+              style={{ backgroundImage: `url(${image.url})` }}
+              className="image-details__photo__inner"
+            ></motion.div>
+          </div>
         </div>
-
-        <div className="image-details__photo">
-          <motion.div
-            variants={scaleDownVariants}
-            style={{ backgroundImage: `url(${image.url})` }}
-            className="image-details__photo__inner"
-          ></motion.div>
-        </div>
-      </div>
-    </motion.section>
+      </motion.section>
+    </>
   );
 }

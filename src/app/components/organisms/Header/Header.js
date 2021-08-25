@@ -1,20 +1,26 @@
 import Button from "../../atoms/Button/Button";
-import { useLocation } from "react-router-dom";
+import { motion } from "framer-motion";
+import { fadeUpVariants } from "../../../constants/animations";
 import "./Header.scss";
 
 export default function Header() {
-  let location = useLocation();
-  console.log(location);
   return (
-    <header>
+    <motion.header
+      initial="initial"
+      animate="animate"
+      exit="exit"
+      variants={fadeUpVariants}
+      className="header"
+    >
+      <div className="circle"></div>
       <h1>Stories from space</h1>
       <p className="intro">
-        A gallery of random images, pulled from the NASA Astronomy Picture of
-        the Day API. Select an item from the grid to read the story behind the
-        image. Hit the 'rfresh' button to refresh
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
+        tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim
+        veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea
+        commodo consequat
       </p>
       <Button path="/" text={"Refresh"}></Button>
-      {location.pathname !== "/" && <Button path="/" text={"Back"}></Button>}
-    </header>
+    </motion.header>
   );
 }

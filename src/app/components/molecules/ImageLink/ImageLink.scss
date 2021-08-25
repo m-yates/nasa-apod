@@ -2,7 +2,7 @@
 
 .image-link {
   display: grid;
-  gap: 10px;
+  gap: 15px;
 }
 
 .image-link__photo {
@@ -22,4 +22,8 @@
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
+}
+
+.image-link__title {
+  font-weight: 400;
 }

@@ -1,6 +1,6 @@
 import { Link } from "react-router-dom";
 import { motion } from "framer-motion";
-import { fadeUpVariants, scaleTransition } from "../../../constants/animations";
+import { scaleTransition } from "../../../constants/animations";
 import "./ImageLink.scss";
 
 export default function ImageLink({ path, url, title }) {

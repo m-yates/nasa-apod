@@ -4,11 +4,11 @@
   @if $lg {
     #{$property}: 120px;
     @media (max-width: $breakpoint-mobile) {
-      #{$property}: 40px;
+      #{$property}: 60px;
     }
   }
   @if $sm {
-    #{$property}: 60px;
+    #{$property}: 80px;
     @media (max-width: $breakpoint-mobile) {
       #{$property}: 20px;
     }

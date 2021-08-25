@@ -4,6 +4,15 @@
   @include spacing(padding-left, $sm: true);
   @include spacing(padding-right, $sm: true);
   @include spacing(padding-bottom, $lg: true);
+  @include spacing(padding-top, $sm: true);
+  @media (max-width: $breakpoint-mobile) {
+    @include spacing(padding-top, $lg: true);
+  }
+}
+
+.image-details__title {
+  text-align: center;
+  @include spacing(padding-bottom, $sm: true);
 }
 
 .image-details__content {
@@ -12,12 +21,18 @@
   gap: 100px;
   @media (max-width: $breakpoint-mobile) {
     grid-template-columns: 1fr;
-    gap: 20px;
+    gap: 30px;
   }
 }
 
 .image-details__content__title {
   margin-bottom: 15px;
+}
+
+.image-details__desc {
+  @media (max-width: $breakpoint-mobile) {
+    text-align: center;
+  }
 }
 
 .image-details__photo {
@@ -27,6 +42,9 @@
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
+  @media (max-width: $breakpoint-mobile) {
+    min-height: 350px;
+  }
 }
 
 .image-details__photo__inner {

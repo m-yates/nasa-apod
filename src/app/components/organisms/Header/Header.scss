@@ -1,17 +1,51 @@
 @import "../../../styles/mixins.scss";
+@import "../../../styles/variables.scss";
 
-header {
+@mixin circle-height($property) {
+  #{$property}: 450px;
+  @media (max-width: $breakpoint-mobile) {
+    #{$property}: 300px;
+  }
+}
+
+.header {
+  position: relative;
+  @include circle-height("min-height");
+  min-height: 450px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
   @include spacing(padding-left, $sm: true);
   @include spacing(padding-right, $sm: true);
-  @include spacing(padding-top, $lg: true);
-  @include spacing(padding-bottom, $lg: true);
+  @include spacing(margin-bottom, $sm: true);
   text-align: center;
+  @media (max-width: $breakpoint-mobile) {
+    @include spacing(margin-bottom, $lg: true);
+    @include spacing(margin-top, $lg: true);
+  }
+}
+
+.circle {
+  position: absolute;
+  z-index: -1;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  @include circle-height("width");
+  @include circle-height("height");
+  border-radius: 50%;
+  border: 4px $color-blue-md solid;
 }
 
 .intro {
   width: 700px;
   margin: 0 auto;
   margin-bottom: 20px;
+  @media (max-width: $breakpoint-mobile) {
+    width: 100%;
+    margin: 5px 0 20px 0;
+  }
 }
 
 .header__buttons {
