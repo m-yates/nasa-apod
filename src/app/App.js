@@ -2,7 +2,6 @@ import React, { useEffect, useState } from "react";
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 import { paramCase } from "change-case";
 import Home from "./components/pages/Home/Home";
-import Header from "./components/organisms/Header/Header";
 import ImageDetails from "./components/pages/ImageDetails/ImageDetails";
 import { AnimatePresence } from "framer-motion";
 import "./App.scss";

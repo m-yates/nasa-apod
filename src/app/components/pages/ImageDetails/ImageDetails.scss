@@ -13,6 +13,9 @@
 .image-details__title {
   text-align: center;
   @include spacing(padding-bottom, $sm: true);
+  @media (max-width: $breakpoint-mobile) {
+    padding-bottom: 5px;
+  }
 }
 
 .image-details__content {
@@ -21,7 +24,7 @@
   gap: 100px;
   @media (max-width: $breakpoint-mobile) {
     grid-template-columns: 1fr;
-    gap: 30px;
+    gap: 25px;
   }
 }
 

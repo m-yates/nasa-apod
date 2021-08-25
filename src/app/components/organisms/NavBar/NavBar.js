@@ -42,7 +42,7 @@ export default function NavBar() {
         </svg>
       </div>
 
-      {location.pathname == "/" ? (
+      {location.pathname === "/" ? (
         <Button classNames="button--outlined" path="/" text={"Github"}></Button>
       ) : (
         <Button path="/" text={"Back"}></Button>
