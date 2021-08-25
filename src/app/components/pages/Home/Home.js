@@ -1,4 +1,5 @@
-import React from "react";
+import React, { useEffect } from "react";
+import { useLocation } from "react-router-dom";
 import Header from "../../organisms/Header/Header";
 import ImageLinkGrid from "../../organisms/ImageLinkGrid/ImageLinkGrid";
 import { motion } from "framer-motion";
@@ -8,6 +9,10 @@ import NavBar from "../../organisms/NavBar/NavBar";
 import "./Home.scss";
 
 export default function Home({ images }) {
+  const { pathname } = useLocation();
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, [pathname]);
   return (
     <>
       <NavBar />

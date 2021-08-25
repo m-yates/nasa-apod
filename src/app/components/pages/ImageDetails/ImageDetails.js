@@ -1,4 +1,5 @@
-import React from "react";
+import React, { useEffect } from "react";
+import { useLocation } from "react-router-dom";
 import NavBar from "../../organisms/NavBar/NavBar";
 import { motion } from "framer-motion";
 import {
@@ -12,6 +13,10 @@ export default function ImageDetails({ images, ...props }) {
   const image = images.find((image) => {
     return image.id === id;
   });
+  const { pathname } = useLocation();
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, [pathname]);
   return (
     <>
       <NavBar />
