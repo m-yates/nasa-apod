@@ -5,26 +5,6 @@ nav {
   @include spacing(padding-left, $sm: true);
   @include spacing(padding-right, $sm: true);
   display: flex;
-  align-items: flex-start;
-  justify-content: space-between;
-}
-
-.logo {
-  display: flex;
   align-items: center;
-  gap: 5px;
-}
-
-.logo__icon {
-  width: 50px;
-}
-
-.logo__icon__top,
-.logo__icon__wing,
-.logo__icon__base {
-  fill: $color-blue-md;
-}
-
-.logo__icon__body {
-  fill: $color-blue-light;
+  justify-content: space-between;
 }

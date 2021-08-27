@@ -16,7 +16,6 @@ export default function Home({ images }) {
   }, [pathname]);
   return (
     <>
-      <NavBar />
       <Header />
       {!images ? (
         <motion.h4
