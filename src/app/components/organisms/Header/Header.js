@@ -15,12 +15,13 @@ export default function Header() {
       <h1>Stories from space</h1>
       <p className="header__intro">
         An image gallery, pulling from the NASA 'Astronomy Picture of the Day'
-        API. Built with React, Framer Motion and SASS.
+        API. Click on an image to view the story. Built with React, Framer
+        Motion and SASS.
       </p>
       <a
         href="https://github.com/mattyatesdev/stories-from-space"
         target="_blank"
-        rel="noopener"
+        rel="noreferrer"
         className="button button--outlined"
       >
         Github
