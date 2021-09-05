@@ -2,13 +2,13 @@
 
 @mixin spacing($property, $lg: false, $sm: false) {
   @if $lg {
-    #{$property}: 120px;
+    #{$property}: 90px;
     @media (max-width: $breakpoint-mobile) {
       #{$property}: 60px;
     }
   }
   @if $sm {
-    #{$property}: 80px;
+    #{$property}: 60px;
     @media (max-width: $breakpoint-mobile) {
       #{$property}: 20px;
     }

@@ -11,7 +11,7 @@ export default function NavBar() {
       exit="exit"
       variants={fadeUpVariants}
     >
-      <h3 class="nav__title">
+      <h3 className="nav__title">
         Stories from space<span className="punctuation">.</span>
       </h3>
       <Button path="/" text={"Back"}></Button>

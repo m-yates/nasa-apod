@@ -6,7 +6,7 @@
   @include spacing(padding-bottom, $lg: true);
   @include spacing(padding-top, $sm: true);
   @media (max-width: $breakpoint-mobile) {
-    @include spacing(padding-top, $lg: true);
+    padding-top: 40px;
   }
 }
 

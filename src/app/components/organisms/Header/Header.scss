@@ -2,7 +2,7 @@
 @import "../../../styles/variables.scss";
 
 @mixin circle-height($property) {
-  #{$property}: 400px;
+  #{$property}: 380px;
   @media (max-width: $breakpoint-mobile) {
     #{$property}: 250px;
   }
@@ -17,14 +17,14 @@
   row-gap: 5px;
   align-items: center;
   justify-content: center;
-  @include spacing(margin-top, $lg: true);
   @include spacing(padding-left, $sm: true);
   @include spacing(padding-right, $sm: true);
+  @include spacing(margin-top, $sm: true);
   @include spacing(margin-bottom, $sm: true);
   text-align: center;
   @media (max-width: $breakpoint-mobile) {
-    @include spacing(margin-bottom, $lg: true);
-    @include spacing(margin-top, $lg: true);
+    @include spacing(margin-bottom, $sm: true);
+    @include spacing(margin-top, $sm: true);
   }
 }
 
@@ -41,8 +41,4 @@
   @media (max-width: $breakpoint-mobile) {
     display: none;
   }
-}
-
-.header__title {
-  width: 600px;
 }
