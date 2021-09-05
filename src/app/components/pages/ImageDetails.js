@@ -5,7 +5,9 @@ import { motion } from "framer-motion";
 import { fadeUpVariants, scaleDownVariants } from "../../constants/animations";
 
 export default function ImageDetails({ images, ...props }) {
+  // Get the ID of the image that was passed in
   const id = props.match.params.id;
+  // Find this image ID in the array of image objects, and return this image
   const image = images.find((image) => {
     return image.id === id;
   });
