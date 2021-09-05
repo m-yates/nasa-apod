@@ -10,7 +10,7 @@ export default function ImageLink({ path, url, title }) {
           whileHover={{ scale: 1.1 }}
           transition={scaleTransition}
           style={{ backgroundImage: `url(${url})` }}
-          className="absolute inset-0 z-0 bg-yellow-500 bg-center bg-repeat bg-cover"
+          className="absolute inset-0 z-0 bg-gray-700 bg-center bg-repeat bg-cover"
         ></motion.div>
         <p className="text-white bg-gray-800 px-4 py-2 relative z-1 font-normal  font-openSans">
           {title}
