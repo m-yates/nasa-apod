@@ -1,10 +1,9 @@
 import React, { useEffect, useState } from "react";
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 import { paramCase } from "change-case";
-import Home from "./components/pages/Home/Home";
-import ImageDetails from "./components/pages/ImageDetails/ImageDetails";
+import Home from "./components/pages/Home";
+import ImageDetails from "./components/pages/ImageDetails";
 import { AnimatePresence } from "framer-motion";
-import "./App.scss";
 
 const apiKey = process.env.REACT_APP_NASA_KEY;
 

@@ -1,7 +1,6 @@
 import { motion } from "framer-motion";
-import ImageLink from "../../molecules/ImageLink/ImageLink";
-import { fadeUpVariants } from "../../../constants/animations";
-import "./ImageLinkGrid.scss";
+import ImageLink from "../molecules/ImageLink";
+import { fadeUpVariants } from "../../constants/animations";
 
 export default function ImageLinkGrid({ images }) {
   return (
@@ -10,7 +9,7 @@ export default function ImageLinkGrid({ images }) {
       animate="animate"
       exit="exit"
       variants={fadeUpVariants}
-      className="image-link-grid"
+      className="grid grid-cols-3 gap-6 px-20 pb-20"
     >
       {images.map((image) =>
         image.media_type === "image" ? (
