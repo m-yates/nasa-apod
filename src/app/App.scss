@@ -12,68 +12,68 @@
 
 body {
   background-color: $color-black;
-  color: $color-white;
-  font-weight: 300;
-  font-family: "Open Sans", sans-serif;
+  // color: $color-white;
+  // font-weight: 300;
+  // font-family: "Open Sans", sans-serif;
 }
 
-nav,
-header,
-section,
-footer {
-  max-width: $breakpoint-max;
-  margin: 0 auto;
-}
+// nav,
+// header,
+// section,
+// footer {
+//   max-width: $breakpoint-max;
+//   margin: 0 auto;
+// }
 
-h1,
-h2,
-h3,
-h4 {
-  font-weight: 700;
-  text-transform: uppercase;
-  font-family: "Orbitron", sans-serif;
-  line-height: 130%;
-}
+// h1,
+// h2,
+// h3,
+// h4 {
+//   font-weight: 700;
+//   text-transform: uppercase;
+//   font-family: "Orbitron", sans-serif;
+//   line-height: 130%;
+// }
 
-h1 {
-  font-size: 56px;
-  @media (max-width: $breakpoint-mobile) {
-    font-size: 40px;
-  }
-}
+// h1 {
+//   font-size: 56px;
+//   @media (max-width: $breakpoint-mobile) {
+//     font-size: 40px;
+//   }
+// }
 
-h2 {
-  font-size: 40px;
-  @media (max-width: $breakpoint-mobile) {
-    font-size: 36px;
-  }
-}
+// h2 {
+//   font-size: 40px;
+//   @media (max-width: $breakpoint-mobile) {
+//     font-size: 36px;
+//   }
+// }
 
-h3 {
-  font-size: 24px;
-  @media (max-width: $breakpoint-mobile) {
-    font-size: 28px;
-  }
-}
+// h3 {
+//   font-size: 24px;
+//   @media (max-width: $breakpoint-mobile) {
+//     font-size: 28px;
+//   }
+// }
 
-h4 {
-  font-size: 20px;
-  @media (max-width: $breakpoint-mobile) {
-    font-size: 18px;
-  }
-}
+// h4 {
+//   font-size: 20px;
+//   @media (max-width: $breakpoint-mobile) {
+//     font-size: 18px;
+//   }
+// }
 
-p,
-a {
-  font-size: 17px;
-  line-height: 160%;
-}
+// p,
+// a {
+//   font-size: 17px;
+//   line-height: 160%;
+// }
 
-a {
-  color: $color-white;
-  text-decoration: none;
-}
+// a {
+//   color: $color-white;
+//   text-decoration: none;
+// }
 
-.punctuation {
-  color: $color-orange;
-}
+// .punctuation {
+//   color: $color-orange;
+// }
