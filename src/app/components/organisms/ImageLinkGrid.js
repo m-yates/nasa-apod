@@ -9,7 +9,7 @@ export default function ImageLinkGrid({ images }) {
       animate="animate"
       exit="exit"
       variants={fadeUpVariants}
-      className="grid grid-cols-3 gap-6 px-20 pb-20"
+      className="grid grid-cols-1 md:grid-cols-3 px-6 md:px-20 pb-6 md:pb-20 gap-6"
     >
       {images.map((image) =>
         image.media_type === "image" ? (

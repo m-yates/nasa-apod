@@ -9,9 +9,9 @@ export default function NavBar() {
       animate="animate"
       exit="exit"
       variants={fadeUpVariants}
-      className="flex content-center justify-between pt-20 px-20"
+      className="flex content-center justify-end md:justify-between px-6 md:px-20 pt-6 md:pt-20"
     >
-      <h3 className="text-2xl text-white uppercase font-orbitron">
+      <h3 className="text-2xl text-white uppercase font-orbitron hidden md:block">
         Stories from space<span className="text-yellow-500">.</span>
       </h3>
       <Button path="/" text={"Back"}></Button>

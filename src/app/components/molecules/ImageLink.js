@@ -5,7 +5,7 @@ import { scaleTransition } from "../../constants/animations";
 export default function ImageLink({ path, url, title }) {
   return (
     <Link to={path}>
-      <div className="flex items-end overflow-hidden relative h-72 cursor-pointer">
+      <div className="flex items-end overflow-hidden relative h-64 md:h-72 cursor-pointer">
         <motion.div
           whileHover={{ scale: 1.1 }}
           transition={scaleTransition}
