@@ -2,7 +2,7 @@
 @import "../../../styles/variables.scss";
 
 @mixin circle-height($property) {
-  #{$property}: 450px;
+  #{$property}: 400px;
   @media (max-width: $breakpoint-mobile) {
     #{$property}: 250px;
   }
@@ -43,13 +43,6 @@
   }
 }
 
-.header__intro {
-  font-weight: 400;
-  width: 620px;
-  margin: 0 auto;
-  margin-bottom: 20px;
-  @media (max-width: $breakpoint-mobile) {
-    width: 100%;
-    margin: 5px 0 20px 0;
-  }
+.header__title {
+  width: 600px;
 }
