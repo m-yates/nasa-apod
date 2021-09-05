@@ -1,6 +1,7 @@
 import { motion } from "framer-motion";
 import { fadeUpVariants } from "../../../constants/animations";
 import "./Header.scss";
+import Button from "../../atoms/Button/Button";
 
 export default function Header() {
   return (
@@ -15,6 +16,7 @@ export default function Header() {
       <h1 className="header__title">
         Stories from space<span className="punctuation">.</span>
       </h1>
+      <Button path="/" text={"Back"}></Button>
     </motion.header>
   );
 }
