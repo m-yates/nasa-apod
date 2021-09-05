@@ -1,6 +1,6 @@
 # Stories from Space
 
-A simple image gallery app, fetching and displaying 20 random images from the [NASA APOD API](https://github.com/nasa/apod-api). 
+A simple image gallery app, fetching and displaying 20 random images from the [NASA 'Astronomy Picture of the Day' API](https://github.com/nasa/apod-api). 
 
 See the working app [here](https://stories-from-space.netlify.app/).
 
