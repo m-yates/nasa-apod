@@ -4,7 +4,7 @@ A simple image gallery app, fetching and displaying 20 random images from the [N
 
 Built with [React](https://github.com/facebook/create-react-app), [Framer Motion](https://github.com/framer/motion) and [Tailwind CSS](https://github.com/tailwindlabs/tailwindcss).
 
-See the working app [here](https://stories-from-space.netlify.app/).
+See the working app [here](https://mattyatesdev-stories-from-space.netlify.app).
 
 ## Installation
 
