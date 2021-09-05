@@ -14,8 +14,8 @@ export default function ImageLink({ path, url, title }) {
             style={{ backgroundImage: `url(${url})` }}
             className="image-link__photo__inner"
           ></motion.div>
+          <p className="image-link__title">{title}</p>
         </div>
-        <p className="image-link__title">{title}</p>
       </div>
     </Link>
   );

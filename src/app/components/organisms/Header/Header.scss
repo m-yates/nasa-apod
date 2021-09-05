@@ -37,7 +37,10 @@
   @include circle-height("width");
   @include circle-height("height");
   border-radius: 50%;
-  border: 6px $color-blue-md solid;
+  border: 4px $color-orange solid;
+  @media (max-width: $breakpoint-mobile) {
+    display: none;
+  }
 }
 
 .header__intro {

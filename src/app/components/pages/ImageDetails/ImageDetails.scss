@@ -12,9 +12,11 @@
 
 .image-details__title {
   text-align: center;
+  width: 800px;
+  margin: 0 auto;
   @include spacing(padding-bottom, $sm: true);
   @media (max-width: $breakpoint-mobile) {
-    padding-bottom: 5px;
+    width: 100%;
   }
 }
 
@@ -34,9 +36,6 @@
 
 .image-details__desc {
   word-break: break-word;
-  @media (max-width: $breakpoint-mobile) {
-    text-align: center;
-  }
 }
 
 .image-details__photo {

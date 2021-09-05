@@ -3,17 +3,11 @@
 .button {
   font-family: "Orbitron", sans-serif;
   display: inline-block;
-  background-color: $color-white;
-  color: $color-blue-dark;
+  background-color: $color-orange;
+  color: $color-black;
   cursor: pointer;
   text-transform: uppercase;
   font-weight: 700;
   padding: 10px 16px;
   text-decoration: none;
-}
-
-.button--outlined {
-  border: 2px $color-blue-light solid;
-  background-color: transparent;
-  color: $color-white;
 }

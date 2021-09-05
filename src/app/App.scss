@@ -11,7 +11,7 @@
 }
 
 body {
-  background-color: $color-blue-dark;
+  background-color: $color-black;
   color: $color-white;
   font-weight: 300;
   font-family: "Open Sans", sans-serif;
@@ -72,4 +72,8 @@ a {
 a {
   color: $color-white;
   text-decoration: none;
+}
+
+.punctuation {
+  color: $color-orange;
 }

@@ -12,20 +12,14 @@ export default function Header() {
       className="header"
     >
       <div className="header__circle"></div>
-      <h1>Stories from space</h1>
+      <h1 className="header__title">
+        Stories from space<span className="punctuation">.</span>
+      </h1>
       <p className="header__intro">
         An image gallery, pulling from the NASA 'Astronomy Picture of the Day'
         API. Click on an image to view the story. Built with React, Framer
         Motion and SASS.
       </p>
-      <a
-        href="https://github.com/mattyatesdev/stories-from-space"
-        target="_blank"
-        rel="noreferrer"
-        className="button button--outlined"
-      >
-        Github
-      </a>
     </motion.header>
   );
 }

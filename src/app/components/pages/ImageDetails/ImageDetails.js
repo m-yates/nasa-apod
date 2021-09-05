@@ -27,7 +27,10 @@ export default function ImageDetails({ images, ...props }) {
         className="image-details"
         variants={fadeUpVariants}
       >
-        <h2 className="image-details__title">{image.title}</h2>
+        <h2 className="image-details__title">
+          {image.title}
+          <span className="punctuation">.</span>
+        </h2>
         <div className="image-details__content">
           <p className="image-details__desc">{image.explanation}</p>
           <div className="image-details__photo">

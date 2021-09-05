@@ -5,11 +5,6 @@ export const fadeUpTransition = {
   ease: [0.6, 0.01, -0.05, 0.9],
 };
 
-export const scaleTransition = {
-  duration: duration * 1.25,
-  ease: [0.43, 0.13, 0.23, 0.96],
-};
-
 export const fadeUpVariants = {
   initial: { opacity: 0, y: 10 },
   animate: {
@@ -26,6 +21,11 @@ export const fadeUpVariants = {
       ...fadeUpTransition,
     },
   },
+};
+
+export const scaleTransition = {
+  duration: duration * 1.25,
+  ease: [0.43, 0.13, 0.23, 0.96],
 };
 
 export const scaleDownVariants = {
