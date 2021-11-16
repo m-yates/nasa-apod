@@ -1,4 +1,4 @@
-# Stories from Space
+# NASA APOD App
 
 An image gallery app, fetching and displaying 20 random images from the [NASA 'Astronomy Picture of the Day' API](https://github.com/nasa/apod-api). Click on an image to read the story behind it.
 
